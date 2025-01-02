@@ -65,9 +65,17 @@ class DesktopEntry with _$DesktopEntry {
 
   static Future<DesktopEntry> parseFile(File file) async {
     String source = await file.readAsString();
-    return DesktopEntry.parse(source).copyWith(
-      id: getDesktopFileId(file.path),
-    );
+    try {
+      return DesktopEntry.parse(source).copyWith(
+        id: getDesktopFileId(file.path),
+      );
+    } catch (e){
+      print('Error parsing desktop file: ${file.path}');
+      print('Error: $e');
+      print('Source: \n$source');
+      return DesktopEntry(entries: {}, actions: {}, id: getDesktopFileId(file.path));
+    }
+
   }
 
   LocalizedDesktopEntry localize({
@@ -161,8 +169,8 @@ Map<String, Entry> parseEntries(Iterable<String> entryLines) {
   EntryLine readLine(String line) {
     var delimiter = line.indexOf("=");
     if (delimiter == -1) {
-      print('Error parsing entry: Invalid line format: $line');
-      return (name: null, locale: (null, null, null, null), value: '');
+      throw('Error parsing entry: Invalid line format: $line');
+      //return (name: null, locale: (null, null, null, null), value: '');
     }
     String key = line.substring(0, delimiter).trim();
     String value = line.substring(delimiter + 1).trim();
