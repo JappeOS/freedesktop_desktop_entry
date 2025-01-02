@@ -20,7 +20,7 @@ Future<Map<String, DesktopEntry>> parseAllInstalledDesktopFiles() async {
 
   for (final Directory dir in whereExists(getApplicationDirectories().map(Directory.new))) {
     await for (FileSystemEntity entity in dir.list()) {
-      if (entity is File) {
+      if (entity is File && entity.path.endsWith('.desktop')) {
         Future<DesktopEntry> desktopEntry = DesktopEntry.parseFile(entity.absolute);
         futures.add(desktopEntry);
       }
