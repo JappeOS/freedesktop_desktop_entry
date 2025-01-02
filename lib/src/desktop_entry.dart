@@ -160,6 +160,10 @@ typedef EntryLine = ({
 Map<String, Entry> parseEntries(Iterable<String> entryLines) {
   EntryLine readLine(String line) {
     var delimiter = line.indexOf("=");
+    if (delimiter == -1) {
+      print('Error parsing entry: Invalid line format: $line');
+      return (name: null, locale: (null, null, null, null), value: '');
+    }
     String key = line.substring(0, delimiter).trim();
     String value = line.substring(delimiter + 1).trim();
 
