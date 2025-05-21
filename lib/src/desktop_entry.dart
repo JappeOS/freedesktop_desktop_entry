@@ -35,7 +35,7 @@ Future<Map<String, DesktopEntry>> parseAllInstalledDesktopFiles() async {
 }
 
 @freezed
-class DesktopEntry with _$DesktopEntry {
+abstract class DesktopEntry with _$DesktopEntry {
   const DesktopEntry._();
 
   const factory DesktopEntry({

@@ -6,7 +6,7 @@ import 'locale.dart';
 part 'entry.freezed.dart';
 
 @freezed
-class Entry with _$Entry {
+abstract class Entry with _$Entry {
   Entry._();
 
   factory Entry({
