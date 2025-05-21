@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,82 +10,57 @@ part of 'desktop_entry.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$DesktopEntry {
   /// Entries from `[Desktop Entry]`.
-  Map<String, Entry> get entries => throw _privateConstructorUsedError;
+  Map<String, Entry> get entries;
 
   /// Actions with their entries.
   /// A section named `[Desktop Action xyz]` has key `xyz`.
-  Map<String, Map<String, Entry>> get actions =>
-      throw _privateConstructorUsedError;
+  Map<String, Map<String, Entry>> get actions;
 
   /// The desktop file ID.
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
 
-  @JsonKey(ignore: true)
-  $DesktopEntryCopyWith<DesktopEntry> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DesktopEntryCopyWith<$Res> {
-  factory $DesktopEntryCopyWith(
-          DesktopEntry value, $Res Function(DesktopEntry) then) =
-      _$DesktopEntryCopyWithImpl<$Res, DesktopEntry>;
-  @useResult
-  $Res call(
-      {Map<String, Entry> entries,
-      Map<String, Map<String, Entry>> actions,
-      String? id});
-}
-
-/// @nodoc
-class _$DesktopEntryCopyWithImpl<$Res, $Val extends DesktopEntry>
-    implements $DesktopEntryCopyWith<$Res> {
-  _$DesktopEntryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of DesktopEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $DesktopEntryCopyWith<DesktopEntry> get copyWith =>
+      _$DesktopEntryCopyWithImpl<DesktopEntry>(
+          this as DesktopEntry, _$identity);
+
   @override
-  $Res call({
-    Object? entries = null,
-    Object? actions = null,
-    Object? id = freezed,
-  }) {
-    return _then(_value.copyWith(
-      entries: null == entries
-          ? _value.entries
-          : entries // ignore: cast_nullable_to_non_nullable
-              as Map<String, Entry>,
-      actions: null == actions
-          ? _value.actions
-          : actions // ignore: cast_nullable_to_non_nullable
-              as Map<String, Map<String, Entry>>,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is DesktopEntry &&
+            const DeepCollectionEquality().equals(other.entries, entries) &&
+            const DeepCollectionEquality().equals(other.actions, actions) &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(entries),
+      const DeepCollectionEquality().hash(actions),
+      id);
+
+  @override
+  String toString() {
+    return 'DesktopEntry(entries: $entries, actions: $actions, id: $id)';
   }
 }
 
 /// @nodoc
-abstract class _$$_DesktopEntryCopyWith<$Res>
-    implements $DesktopEntryCopyWith<$Res> {
-  factory _$$_DesktopEntryCopyWith(
-          _$_DesktopEntry value, $Res Function(_$_DesktopEntry) then) =
-      __$$_DesktopEntryCopyWithImpl<$Res>;
-  @override
+abstract mixin class $DesktopEntryCopyWith<$Res> {
+  factory $DesktopEntryCopyWith(
+          DesktopEntry value, $Res Function(DesktopEntry) _then) =
+      _$DesktopEntryCopyWithImpl;
   @useResult
   $Res call(
       {Map<String, Entry> entries,
@@ -93,13 +69,14 @@ abstract class _$$_DesktopEntryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DesktopEntryCopyWithImpl<$Res>
-    extends _$DesktopEntryCopyWithImpl<$Res, _$_DesktopEntry>
-    implements _$$_DesktopEntryCopyWith<$Res> {
-  __$$_DesktopEntryCopyWithImpl(
-      _$_DesktopEntry _value, $Res Function(_$_DesktopEntry) _then)
-      : super(_value, _then);
+class _$DesktopEntryCopyWithImpl<$Res> implements $DesktopEntryCopyWith<$Res> {
+  _$DesktopEntryCopyWithImpl(this._self, this._then);
 
+  final DesktopEntry _self;
+  final $Res Function(DesktopEntry) _then;
+
+  /// Create a copy of DesktopEntry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,17 +84,17 @@ class __$$_DesktopEntryCopyWithImpl<$Res>
     Object? actions = null,
     Object? id = freezed,
   }) {
-    return _then(_$_DesktopEntry(
+    return _then(_self.copyWith(
       entries: null == entries
-          ? _value._entries
+          ? _self.entries
           : entries // ignore: cast_nullable_to_non_nullable
               as Map<String, Entry>,
       actions: null == actions
-          ? _value._actions
+          ? _self.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as Map<String, Map<String, Entry>>,
       id: freezed == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
@@ -126,8 +103,8 @@ class __$$_DesktopEntryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DesktopEntry extends _DesktopEntry {
-  const _$_DesktopEntry(
+class _DesktopEntry extends DesktopEntry {
+  const _DesktopEntry(
       {required final Map<String, Entry> entries,
       final Map<String, Map<String, Entry>> actions = const {},
       this.id = null})
@@ -165,16 +142,19 @@ class _$_DesktopEntry extends _DesktopEntry {
   @JsonKey()
   final String? id;
 
+  /// Create a copy of DesktopEntry
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'DesktopEntry(entries: $entries, actions: $actions, id: $id)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$DesktopEntryCopyWith<_DesktopEntry> get copyWith =>
+      __$DesktopEntryCopyWithImpl<_DesktopEntry>(this, _$identity);
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DesktopEntry &&
+            other is _DesktopEntry &&
             const DeepCollectionEquality().equals(other._entries, _entries) &&
             const DeepCollectionEquality().equals(other._actions, _actions) &&
             (identical(other.id, id) || other.id == id));
@@ -187,35 +167,58 @@ class _$_DesktopEntry extends _DesktopEntry {
       const DeepCollectionEquality().hash(_actions),
       id);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'DesktopEntry(entries: $entries, actions: $actions, id: $id)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$DesktopEntryCopyWith<$Res>
+    implements $DesktopEntryCopyWith<$Res> {
+  factory _$DesktopEntryCopyWith(
+          _DesktopEntry value, $Res Function(_DesktopEntry) _then) =
+      __$DesktopEntryCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {Map<String, Entry> entries,
+      Map<String, Map<String, Entry>> actions,
+      String? id});
+}
+
+/// @nodoc
+class __$DesktopEntryCopyWithImpl<$Res>
+    implements _$DesktopEntryCopyWith<$Res> {
+  __$DesktopEntryCopyWithImpl(this._self, this._then);
+
+  final _DesktopEntry _self;
+  final $Res Function(_DesktopEntry) _then;
+
+  /// Create a copy of DesktopEntry
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$_DesktopEntryCopyWith<_$_DesktopEntry> get copyWith =>
-      __$$_DesktopEntryCopyWithImpl<_$_DesktopEntry>(this, _$identity);
+  $Res call({
+    Object? entries = null,
+    Object? actions = null,
+    Object? id = freezed,
+  }) {
+    return _then(_DesktopEntry(
+      entries: null == entries
+          ? _self._entries
+          : entries // ignore: cast_nullable_to_non_nullable
+              as Map<String, Entry>,
+      actions: null == actions
+          ? _self._actions
+          : actions // ignore: cast_nullable_to_non_nullable
+              as Map<String, Map<String, Entry>>,
+      id: freezed == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 }
 
-abstract class _DesktopEntry extends DesktopEntry {
-  const factory _DesktopEntry(
-      {required final Map<String, Entry> entries,
-      final Map<String, Map<String, Entry>> actions,
-      final String? id}) = _$_DesktopEntry;
-  const _DesktopEntry._() : super._();
-
-  @override
-
-  /// Entries from `[Desktop Entry]`.
-  Map<String, Entry> get entries;
-  @override
-
-  /// Actions with their entries.
-  /// A section named `[Desktop Action xyz]` has key `xyz`.
-  Map<String, Map<String, Entry>> get actions;
-  @override
-
-  /// The desktop file ID.
-  String? get id;
-  @override
-  @JsonKey(ignore: true)
-  _$$_DesktopEntryCopyWith<_$_DesktopEntry> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on

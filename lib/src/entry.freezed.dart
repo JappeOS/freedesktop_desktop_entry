@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,79 +10,59 @@ part of 'entry.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Entry {
-  String get name => throw _privateConstructorUsedError;
-  String get value => throw _privateConstructorUsedError;
-  IMap<Locale, String> get localizedValues =>
-      throw _privateConstructorUsedError;
+  String get name;
+  String get value;
+  IMap<Locale, String> get localizedValues;
 
-  @JsonKey(ignore: true)
-  $EntryCopyWith<Entry> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EntryCopyWith<$Res> {
-  factory $EntryCopyWith(Entry value, $Res Function(Entry) then) =
-      _$EntryCopyWithImpl<$Res, Entry>;
-  @useResult
-  $Res call({String name, String value, IMap<Locale, String> localizedValues});
-}
-
-/// @nodoc
-class _$EntryCopyWithImpl<$Res, $Val extends Entry>
-    implements $EntryCopyWith<$Res> {
-  _$EntryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
+  /// Create a copy of Entry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
+  $EntryCopyWith<Entry> get copyWith =>
+      _$EntryCopyWithImpl<Entry>(this as Entry, _$identity);
+
   @override
-  $Res call({
-    Object? name = null,
-    Object? value = null,
-    Object? localizedValues = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String,
-      localizedValues: null == localizedValues
-          ? _value.localizedValues
-          : localizedValues // ignore: cast_nullable_to_non_nullable
-              as IMap<Locale, String>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Entry &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.localizedValues, localizedValues) ||
+                other.localizedValues == localizedValues));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, name, value, localizedValues);
+
+  @override
+  String toString() {
+    return 'Entry(name: $name, value: $value, localizedValues: $localizedValues)';
   }
 }
 
 /// @nodoc
-abstract class _$$_EntryCopyWith<$Res> implements $EntryCopyWith<$Res> {
-  factory _$$_EntryCopyWith(_$_Entry value, $Res Function(_$_Entry) then) =
-      __$$_EntryCopyWithImpl<$Res>;
-  @override
+abstract mixin class $EntryCopyWith<$Res> {
+  factory $EntryCopyWith(Entry value, $Res Function(Entry) _then) =
+      _$EntryCopyWithImpl;
   @useResult
   $Res call({String name, String value, IMap<Locale, String> localizedValues});
 }
 
 /// @nodoc
-class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
-    implements _$$_EntryCopyWith<$Res> {
-  __$$_EntryCopyWithImpl(_$_Entry _value, $Res Function(_$_Entry) _then)
-      : super(_value, _then);
+class _$EntryCopyWithImpl<$Res> implements $EntryCopyWith<$Res> {
+  _$EntryCopyWithImpl(this._self, this._then);
 
+  final Entry _self;
+  final $Res Function(Entry) _then;
+
+  /// Create a copy of Entry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,17 +70,17 @@ class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
     Object? value = null,
     Object? localizedValues = null,
   }) {
-    return _then(_$_Entry(
+    return _then(_self.copyWith(
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       value: null == value
-          ? _value.value
+          ? _self.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
       localizedValues: null == localizedValues
-          ? _value.localizedValues
+          ? _self.localizedValues
           : localizedValues // ignore: cast_nullable_to_non_nullable
               as IMap<Locale, String>,
     ));
@@ -108,8 +89,8 @@ class __$$_EntryCopyWithImpl<$Res> extends _$EntryCopyWithImpl<$Res, _$_Entry>
 
 /// @nodoc
 
-class _$_Entry extends _Entry {
-  _$_Entry(
+class _Entry extends Entry {
+  _Entry(
       {required this.name, required this.value, required this.localizedValues})
       : super._();
 
@@ -120,16 +101,19 @@ class _$_Entry extends _Entry {
   @override
   final IMap<Locale, String> localizedValues;
 
+  /// Create a copy of Entry
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Entry(name: $name, value: $value, localizedValues: $localizedValues)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$EntryCopyWith<_Entry> get copyWith =>
+      __$EntryCopyWithImpl<_Entry>(this, _$identity);
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Entry &&
+            other is _Entry &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.localizedValues, localizedValues) ||
@@ -139,28 +123,52 @@ class _$_Entry extends _Entry {
   @override
   int get hashCode => Object.hash(runtimeType, name, value, localizedValues);
 
-  @JsonKey(ignore: true)
+  @override
+  String toString() {
+    return 'Entry(name: $name, value: $value, localizedValues: $localizedValues)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$EntryCopyWith<$Res> implements $EntryCopyWith<$Res> {
+  factory _$EntryCopyWith(_Entry value, $Res Function(_Entry) _then) =
+      __$EntryCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String name, String value, IMap<Locale, String> localizedValues});
+}
+
+/// @nodoc
+class __$EntryCopyWithImpl<$Res> implements _$EntryCopyWith<$Res> {
+  __$EntryCopyWithImpl(this._self, this._then);
+
+  final _Entry _self;
+  final $Res Function(_Entry) _then;
+
+  /// Create a copy of Entry
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  _$$_EntryCopyWith<_$_Entry> get copyWith =>
-      __$$_EntryCopyWithImpl<_$_Entry>(this, _$identity);
+  $Res call({
+    Object? name = null,
+    Object? value = null,
+    Object? localizedValues = null,
+  }) {
+    return _then(_Entry(
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      value: null == value
+          ? _self.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String,
+      localizedValues: null == localizedValues
+          ? _self.localizedValues
+          : localizedValues // ignore: cast_nullable_to_non_nullable
+              as IMap<Locale, String>,
+    ));
+  }
 }
 
-abstract class _Entry extends Entry {
-  factory _Entry(
-      {required final String name,
-      required final String value,
-      required final IMap<Locale, String> localizedValues}) = _$_Entry;
-  _Entry._() : super._();
-
-  @override
-  String get name;
-  @override
-  String get value;
-  @override
-  IMap<Locale, String> get localizedValues;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EntryCopyWith<_$_Entry> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+// dart format on
